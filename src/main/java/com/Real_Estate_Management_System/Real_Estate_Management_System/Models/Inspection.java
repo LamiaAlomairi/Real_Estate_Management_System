@@ -18,4 +18,8 @@ public class Inspection {
     String date_inspected;
     String report;
 
+    @ManyToOne
+    @JoinColumn(name = "listing_id", referencedColumnName = "listing_id")
+    Listing listing;
+
 }
