@@ -21,6 +21,10 @@ public class Contract {
     String date_signed;
 
     @ManyToOne
+    @JoinColumn(name = "property_id", referencedColumnName = "property_id")
+    Property property;
+
+    @ManyToOne
     @JoinColumn(name = "listing_id", referencedColumnName = "listing_id")
     Listing listing;
 
