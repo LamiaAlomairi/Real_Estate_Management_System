@@ -22,4 +22,8 @@ public class Inspection {
     @JoinColumn(name = "listing_id", referencedColumnName = "listing_id")
     Listing listing;
 
+    @ManyToOne
+    @JoinColumn(name = "property_id", referencedColumnName = "property_id")
+    Property property;
+
 }
