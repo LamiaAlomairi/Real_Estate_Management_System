@@ -25,4 +25,8 @@ public class Payment {
     @ManyToOne
     @JoinColumn(name = "buyer_id", referencedColumnName = "buyer_id")
     Buyer buyer;
+
+    @ManyToOne
+    @JoinColumn(name = "property_id", referencedColumnName = "property_id")
+    Property property;
 }
