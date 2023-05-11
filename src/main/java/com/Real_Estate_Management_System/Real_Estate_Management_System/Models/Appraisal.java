@@ -18,4 +18,7 @@ public class Appraisal {
     String date_appraised;
     Integer value;
 
+    @ManyToOne
+    @JoinColumn(name = "property_id", referencedColumnName = "property_id")
+    Property property;
 }
