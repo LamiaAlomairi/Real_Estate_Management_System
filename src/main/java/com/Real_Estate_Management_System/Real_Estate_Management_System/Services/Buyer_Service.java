@@ -1,8 +1,6 @@
 package com.Real_Estate_Management_System.Real_Estate_Management_System.Services;
 
-import com.Real_Estate_Management_System.Real_Estate_Management_System.Models.Appraisal;
 import com.Real_Estate_Management_System.Real_Estate_Management_System.Models.Buyer;
-import com.Real_Estate_Management_System.Real_Estate_Management_System.Repositories.Appraisal_Repository;
 import com.Real_Estate_Management_System.Real_Estate_Management_System.Repositories.Buyer_Repository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
