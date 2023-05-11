@@ -18,4 +18,11 @@ public class Payment {
     Double amount;
     String date_paid;
 
+    @ManyToOne
+    @JoinColumn(name = "contract_id", referencedColumnName = "contract_id")
+    Contract contract;
+
+    @ManyToOne
+    @JoinColumn(name = "buyer_id", referencedColumnName = "buyer_id")
+    Buyer buyer;
 }
