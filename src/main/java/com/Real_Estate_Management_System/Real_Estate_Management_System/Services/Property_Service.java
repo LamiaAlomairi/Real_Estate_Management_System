@@ -11,7 +11,7 @@ import java.util.List;
 public class Property_Service {
     @Autowired
     Property_Repository property_repository;
-    public List<Property> getAllPropertys() {
+    public List<Property> getAllProperties() {
 
         return property_repository.findAll();
     }
