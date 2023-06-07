@@ -1,23 +1,23 @@
 package com.Real_Estate_Management_System.Real_Estate_Management_System.Services;
 
 import com.Real_Estate_Management_System.Real_Estate_Management_System.Models.Agent;
-import com.Real_Estate_Management_System.Real_Estate_Management_System.Repositories.Agent_Repository;
+import com.Real_Estate_Management_System.Real_Estate_Management_System.Repositories.AgentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-public class Agent_Service {
+public class AgentService {
     @Autowired
-    Agent_Repository agent_repository;
+    AgentRepository agentRepository;
     public List<Agent> getAllAgents() {
 
-        return agent_repository.findAll();
+        return agentRepository.findAll();
     }
 
     public Agent getAgentById(Long id) {
 
-        return agent_repository.findById(id).get();
+        return agentRepository.findById(id).get();
     }
 }

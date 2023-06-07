@@ -14,19 +14,19 @@ import javax.persistence.*;
 public class Payment {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long payment_id;
+    Long id;
     Double amount;
-    String date_paid;
+    String datePaid;
 
     @ManyToOne
-    @JoinColumn(name = "contract_id", referencedColumnName = "contract_id")
+    @JoinColumn(name = "contract_id", referencedColumnName = "id")
     Contract contract;
 
     @ManyToOne
-    @JoinColumn(name = "buyer_id", referencedColumnName = "buyer_id")
+    @JoinColumn(name = "buyer_id", referencedColumnName = "id")
     Buyer buyer;
 
     @ManyToOne
-    @JoinColumn(name = "property_id", referencedColumnName = "property_id")
+    @JoinColumn(name = "property_id", referencedColumnName = "id")
     Property property;
 }

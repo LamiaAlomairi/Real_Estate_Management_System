@@ -1,7 +1,7 @@
 package com.Real_Estate_Management_System.Real_Estate_Management_System.Controllers;
 
 import com.Real_Estate_Management_System.Real_Estate_Management_System.Models.Buyer;
-import com.Real_Estate_Management_System.Real_Estate_Management_System.Services.Buyer_Service;
+import com.Real_Estate_Management_System.Real_Estate_Management_System.Services.BuyerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -9,18 +9,18 @@ import java.util.List;
 
 @RestController
 @RequestMapping(value = "buyer")
-public class Buyer_Controller {
+public class BuyerController {
     //    http://localhost:8080/buyer/getAll
     @Autowired
-    Buyer_Service buyer_service;
+    BuyerService buyerService;
     @RequestMapping(value = "getAll", method = RequestMethod.GET)
     public List<Buyer> getAllBuyers() {
 
-        return buyer_service.getAllBuyers();
+        return buyerService.getAllBuyers();
     }
     @GetMapping(value = "getById")
     public Buyer getBuyerById(@RequestParam Long id) {
 
-        return buyer_service.getBuyerById(id);
+        return buyerService.getBuyerById(id);
     }
 }

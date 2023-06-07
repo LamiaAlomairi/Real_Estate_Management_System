@@ -1,23 +1,23 @@
 package com.Real_Estate_Management_System.Real_Estate_Management_System.Services;
 
 import com.Real_Estate_Management_System.Real_Estate_Management_System.Models.Appraisal;
-import com.Real_Estate_Management_System.Real_Estate_Management_System.Repositories.Appraisal_Repository;
+import com.Real_Estate_Management_System.Real_Estate_Management_System.Repositories.AppraisalRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-public class Appraisal_Service {
+public class AppraisalService {
     @Autowired
-    Appraisal_Repository appraisal_repository;
+    AppraisalRepository appraisalRepository;
     public List<Appraisal> getAllAppraisals() {
 
-        return appraisal_repository.findAll();
+        return appraisalRepository.findAll();
     }
 
     public Appraisal getAppraisalById(Long id) {
 
-        return appraisal_repository.findById(id).get();
+        return appraisalRepository.findById(id).get();
     }
 }

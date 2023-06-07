@@ -16,24 +16,24 @@ import java.util.List;
 public class Contract {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long contract_id;
+    Long id;
     Double price;
-    String date_signed;
+    String dateSigned;
 
     @ManyToOne
-    @JoinColumn(name = "property_id", referencedColumnName = "property_id")
+    @JoinColumn(name = "property_id", referencedColumnName = "id")
     Property property;
 
     @ManyToOne
-    @JoinColumn(name = "listing_id", referencedColumnName = "listing_id")
+    @JoinColumn(name = "listing_id", referencedColumnName = "id")
     Listing listing;
 
     @ManyToOne
-    @JoinColumn(name = "buyer_id", referencedColumnName = "buyer_id")
+    @JoinColumn(name = "buyer_id", referencedColumnName = "id")
     Buyer buyer;
 
     @ManyToOne
-    @JoinColumn(name = "seller_id", referencedColumnName = "seller_id")
+    @JoinColumn(name = "seller_id", referencedColumnName = "id")
     Seller seller;
 
     @OneToMany(mappedBy = "contract")

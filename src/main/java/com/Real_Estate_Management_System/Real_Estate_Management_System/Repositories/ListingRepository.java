@@ -3,5 +3,5 @@ package com.Real_Estate_Management_System.Real_Estate_Management_System.Reposito
 import com.Real_Estate_Management_System.Real_Estate_Management_System.Models.Listing;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface Listing_Repository extends JpaRepository<Listing, Long> {
+public interface ListingRepository extends JpaRepository<Listing, Long> {
 }

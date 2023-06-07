@@ -16,14 +16,14 @@ import java.util.List;
 public class Seller {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long seller_id;
+    Long id;
     String name;
     String email;
     Long phone;
-    Double asking_price;
+    Double askingPrice;
 
     @ManyToOne
-    @JoinColumn(name = "agent_id", referencedColumnName = "agent_id")
+    @JoinColumn(name = "agent_id", referencedColumnName = "id")
     Agent agent;
 
     @OneToMany(mappedBy = "seller")

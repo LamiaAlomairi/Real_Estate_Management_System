@@ -16,13 +16,13 @@ import java.util.List;
 public class Property {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long property_id;
+    Long id;
     String address;
     String type;
     Double price;
     Integer size;
-    Integer number_of_bedrooms;
-    Integer number_of_bathrooms;
+    Integer numberOfBedrooms;
+    Integer numberOfBathrooms;
     String description;
 
     @OneToMany(mappedBy = "property")

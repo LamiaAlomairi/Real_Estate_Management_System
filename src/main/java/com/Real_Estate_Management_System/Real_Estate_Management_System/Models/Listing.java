@@ -16,20 +16,20 @@ import java.util.List;
 public class Listing {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long listing_id;
+    Long id;
     Long price;
-    String date_listed;
+    String dateListed;
 
     @ManyToOne
-    @JoinColumn(name = "property_id", referencedColumnName = "property_id")
+    @JoinColumn(name = "property_id", referencedColumnName = "id")
     Property property;
 
     @ManyToOne
-    @JoinColumn(name = "agent_id", referencedColumnName = "agent_id")
+    @JoinColumn(name = "agent_id", referencedColumnName = "id")
     Agent agent;
 
     @ManyToOne
-    @JoinColumn(name = "seller_id", referencedColumnName = "seller_id")
+    @JoinColumn(name = "seller_id", referencedColumnName = "id")
     Seller seller;
 
     @OneToMany(mappedBy = "listing")

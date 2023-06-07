@@ -14,16 +14,16 @@ import javax.persistence.*;
 public class Inspection {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long inspection_id;
-    String date_inspected;
+    Long id;
+    String dateInspected;
     String report;
 
     @ManyToOne
-    @JoinColumn(name = "listing_id", referencedColumnName = "listing_id")
+    @JoinColumn(name = "listing_id", referencedColumnName = "id")
     Listing listing;
 
     @ManyToOne
-    @JoinColumn(name = "property_id", referencedColumnName = "property_id")
+    @JoinColumn(name = "property_id", referencedColumnName = "id")
     Property property;
 
 }

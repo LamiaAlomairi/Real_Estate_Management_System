@@ -3,5 +3,5 @@ package com.Real_Estate_Management_System.Real_Estate_Management_System.Reposito
 import com.Real_Estate_Management_System.Real_Estate_Management_System.Models.Inspection;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface Inspection_Repository extends JpaRepository<Inspection, Long> {
+public interface InspectionRepository extends JpaRepository<Inspection, Long> {
 }

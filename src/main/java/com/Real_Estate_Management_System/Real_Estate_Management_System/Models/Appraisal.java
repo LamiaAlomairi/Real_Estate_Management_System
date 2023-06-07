@@ -14,11 +14,11 @@ import javax.persistence.*;
 public class Appraisal {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long appraisal_id;
-    String date_appraised;
+    Long id;
+    String dateAppraised;
     Integer value;
 
     @ManyToOne
-    @JoinColumn(name = "property_id", referencedColumnName = "property_id")
+    @JoinColumn(name = "property_id", referencedColumnName = "id")
     Property property;
 }

@@ -3,5 +3,5 @@ package com.Real_Estate_Management_System.Real_Estate_Management_System.Reposito
 import com.Real_Estate_Management_System.Real_Estate_Management_System.Models.Seller;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface Seller_Repository extends JpaRepository<Seller, Long> {
+public interface SellerRepository extends JpaRepository<Seller, Long> {
 }

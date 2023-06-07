@@ -16,11 +16,11 @@ import java.util.List;
 public class Agent {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long agent_id;
+    Long id;
     String name;
     String email;
     Long phone;
-    Long license_number;
+    Long licenseNumber;
 
     @OneToMany(mappedBy = "agent")
     @JsonIgnore

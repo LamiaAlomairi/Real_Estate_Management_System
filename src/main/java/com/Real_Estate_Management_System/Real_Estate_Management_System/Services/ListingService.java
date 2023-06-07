@@ -1,23 +1,23 @@
 package com.Real_Estate_Management_System.Real_Estate_Management_System.Services;
 
 import com.Real_Estate_Management_System.Real_Estate_Management_System.Models.Listing;
-import com.Real_Estate_Management_System.Real_Estate_Management_System.Repositories.Listing_Repository;
+import com.Real_Estate_Management_System.Real_Estate_Management_System.Repositories.ListingRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-public class Listing_Service {
+public class ListingService {
     @Autowired
-    Listing_Repository listing_repository;
+    ListingRepository listingRepository;
     public List<Listing> getAllListings() {
 
-        return listing_repository.findAll();
+        return listingRepository.findAll();
     }
 
     public Listing getListingById(Long id) {
 
-        return listing_repository.findById(id).get();
+        return listingRepository.findById(id).get();
     }
 }
